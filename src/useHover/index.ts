@@ -8,7 +8,7 @@ interface Options {
   onChange?: (isHover: boolean) => void;
 }
 
-const useHover = (target: BasicTarget, options?: Options): boolean => {
+function useHover(target: BasicTarget, options?: Options): boolean {
   const { onEnter, onLeave, onChange } = options ?? {};
   const [isHover, setIsHover] = useState(false);
 
@@ -33,6 +33,6 @@ const useHover = (target: BasicTarget, options?: Options): boolean => {
   );
 
   return isHover;
-};
+}
 
 export default useHover;

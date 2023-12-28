@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import useLatest from "../useLatest";
 import { BasicTarget } from "../types";
 
-function useEventListener(event: string, handler: (...e: any) => void, target: BasicTarget) {
+function useEventListener(event: string, handler: (...e: any) => void, target: BasicTarget): void {
   const handlerRef = useLatest(handler);
 
   useEffect(() => {
