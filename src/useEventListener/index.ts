@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import useLatest from "../useLatest";
-import { BasicTarget } from "../types";
 
-function useEventListener(event: string, handler: (...e: any) => void, target: BasicTarget): void {
+function useEventListener(event: string, handler: (...e: any) => void, target: any): void {
   const handlerRef = useLatest(handler);
 
   useEffect(() => {
